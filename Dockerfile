@@ -1,5 +1,6 @@
 FROM node
 COPY . .
 RUN npm i
-EXPOSE 8085
+ARG PORT
+EXPOSE ${PORT}
 CMD ["node", "Server.js"]

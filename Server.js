@@ -63,4 +63,5 @@ webSocket.on('request', (request) => {
     });
 });
 
-httpServer.listen(process.env.PORT || 8085, () => console.info('Server has started on port:', port));
+const port = process.env.PORT || 8085;
+httpServer.listen(port, () => console.info('Server has started on port:', port));
