@@ -15,6 +15,7 @@
     "dependencies": {
         "express": "^4.16.2",
         "webrtc-adapter": "^5.0.6",
-        "websocket": "^1.0.25"
+        "websocket": "^1.0.25",
+        "ws": "^7.4.4"
     }
 }
