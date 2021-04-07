@@ -4,7 +4,6 @@
 const http = require('http');
 const express = require('express');
 const websocket = require('websocket');
-const WebSocketServer = require("ws").Server; 
 
 const staticFileServer = express();
 staticFileServer.use('/', express.static(`${__dirname}/public`));
@@ -12,21 +11,6 @@ staticFileServer.use('/offerer', express.static(`${__dirname}/public/offerer.htm
 staticFileServer.use('/answerer', express.static(`${__dirname}/public/answerer.html`));
 
 const httpServer = http.createServer(staticFileServer);
-
-// const wss = new WebSocketServer({server: httpServer});
-
-// wss.on("connection", function(ws) {
-//     const id = setInterval(function() {
-//       ws.send(JSON.stringify(new Date()), function() {  })
-//     }, 1000)
-  
-//     console.log("websocket connection open")
-  
-//     ws.on("close", function() {
-//       console.log("websocket connection close")
-//       clearInterval(id)
-//     })
-//   });  
 
 const webSocket = new websocket.server({
     httpServer: httpServer

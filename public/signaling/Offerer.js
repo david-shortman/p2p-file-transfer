@@ -44,7 +44,7 @@ function setUpWebSocket() {
 
 export function sendOffer() {
     connection = new RTCPeerConnection();
-    webSocket = new WebSocket('ws://localhost:8085', 'json');
+    webSocket = new WebSocket(`ws://${location.hostname}`, 'json');
 
     connection.onicecandidate = (e) => {
         if (!e.candidate) {

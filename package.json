@@ -13,9 +13,8 @@
         "jshint": "^2.9.5"
     },
     "dependencies": {
-        "express": "^4.16.2",
-        "webrtc-adapter": "^5.0.6",
-        "websocket": "^1.0.25",
-        "ws": "^7.4.4"
+        "express": "^4.17.1",
+        "webrtc-adapter": "^7.7.1",
+        "websocket": "^1.0.33"
     }
 }
