@@ -1,4 +1,4 @@
 FROM node
 COPY . .
-RUN npm i
+RUN yarn install --frozen-lockfile
 CMD node Server.js
